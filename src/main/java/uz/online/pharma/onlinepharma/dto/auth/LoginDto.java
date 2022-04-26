@@ -4,11 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.online.pharma.onlinepharma.criteria.GenericCriteria;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserCriteria extends GenericCriteria {
+public class LoginDto {
+    private String credential;
+    private String password;
 }

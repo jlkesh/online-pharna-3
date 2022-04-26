@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/pharma?currentSchema=dev
-    username: javohir
+    username: postgres
     password: admin123
     driver-class-name: org.postgresql.Driver
 

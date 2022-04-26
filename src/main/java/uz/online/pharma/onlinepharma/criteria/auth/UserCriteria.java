@@ -11,4 +11,5 @@ import uz.online.pharma.onlinepharma.criteria.GenericCriteria;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserCriteria extends GenericCriteria {
+    private String username;
 }

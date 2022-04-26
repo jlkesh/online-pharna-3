@@ -1,12 +1,22 @@
 package uz.online.pharma.onlinepharma.utils;
 
-import lombok.Getter;
-import lombok.Setter;
+import org.springframework.stereotype.Component;
 
-@Getter
-@Setter
+import java.util.Collection;
+
+@Component
 public class BaseUtils {
-    public static final String API = "/api";
-    public static final String VERSION = "/v1";
-    public static final String PATH = API + VERSION;
+
+    public boolean isEmpty(Object obj) {
+        return obj == null;
+    }
+
+    public boolean isEmpty(String obj) {
+        return obj == null || obj.length() == 0;
+    }
+
+    public boolean isEmpty(Collection<Object> objs) {
+        return objs == null || objs.size() == 0;
+    }
+
 }

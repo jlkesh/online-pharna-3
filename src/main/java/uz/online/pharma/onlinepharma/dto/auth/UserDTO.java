@@ -11,4 +11,5 @@ import uz.online.pharma.onlinepharma.dto.GenericDTO;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDTO extends GenericDTO {
+    private String username;
 }

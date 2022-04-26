@@ -11,4 +11,5 @@ import uz.online.pharma.onlinepharma.dto.BaseDTO;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserCreateDTO implements BaseDTO {
+    private String username;
 }
