@@ -1,8 +1,8 @@
 package uz.online.pharma.onlinepharma.mapper;
 
+import uz.online.pharma.onlinepharma.domains.BaseEntity;
 import uz.online.pharma.onlinepharma.dto.BaseDTO;
 import uz.online.pharma.onlinepharma.dto.GenericDTO;
-import uz.online.pharma.onlinepharma.domains.BaseEntity;
 
 import java.util.List;
 

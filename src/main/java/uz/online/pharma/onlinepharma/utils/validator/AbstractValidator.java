@@ -1,6 +1,5 @@
 package uz.online.pharma.onlinepharma.utils.validator;
 
-import org.springframework.stereotype.Component;
 import uz.online.pharma.onlinepharma.dto.BaseDTO;
 import uz.online.pharma.onlinepharma.dto.GenericDTO;
 import uz.online.pharma.onlinepharma.exceptions.exception.InvalidValidationException;

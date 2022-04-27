@@ -1,4 +1,4 @@
-package uz.online.pharma.onlinepharma.service.auth.impl;
+package uz.online.pharma.onlinepharma.service.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import uz.online.pharma.onlinepharma.domains.auth.Users;
 import uz.online.pharma.onlinepharma.enums.auth.UserStatus;
 import uz.online.pharma.onlinepharma.repository.auth.UserRepository;
-import uz.online.pharma.onlinepharma.service.auth.UserService;
 
 import java.util.Objects;
 

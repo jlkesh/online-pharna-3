@@ -6,14 +6,12 @@ import com.google.gson.GsonBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.JpaEntityInformationSupport;
 import uz.online.pharma.onlinepharma.criteria.GenericCriteria;
 import uz.online.pharma.onlinepharma.domains.Auditable;
 import uz.online.pharma.onlinepharma.repository.BaseRepository;
 import uz.online.pharma.onlinepharma.utils.BaseUtils;
-
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;

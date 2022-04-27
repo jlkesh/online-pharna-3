@@ -1,9 +1,6 @@
 package uz.online.pharma.onlinepharma.criteria.auth;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import uz.online.pharma.onlinepharma.criteria.GenericCriteria;
 
 @Getter
@@ -11,5 +8,12 @@ import uz.online.pharma.onlinepharma.criteria.GenericCriteria;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserCriteria extends GenericCriteria {
-    private String username;
+    private String principal;
+
+
+    @Builder(builderMethodName = "childBuilder")
+    public UserCriteria(Long selfId, Integer page, Integer perPage, String sortBy, String sortDirection, String principal) {
+        super(selfId, page, perPage, sortBy, sortDirection);
+        this.principal = principal;
+    }
 }

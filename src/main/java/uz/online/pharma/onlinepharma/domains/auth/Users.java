@@ -19,11 +19,10 @@ import java.util.Collection;
 @AllArgsConstructor
 @Entity
 @Table(name = "auth_users")
-//@WhereJoinTable(clause = "deleted == false")
 public class Users extends Auditable {
 
     @Column(unique = true, nullable = false)
-    private String credential;
+    private String principal;
 
     @Column(nullable = false)
     private String password;

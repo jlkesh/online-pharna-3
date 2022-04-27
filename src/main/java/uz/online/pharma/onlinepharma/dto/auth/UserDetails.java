@@ -3,6 +3,7 @@ package uz.online.pharma.onlinepharma.dto.auth;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import uz.online.pharma.onlinepharma.domains.auth.Users;
+import uz.online.pharma.onlinepharma.enums.auth.UserStatus;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -11,11 +12,9 @@ import java.util.Set;
 public class UserDetails implements org.springframework.security.core.userdetails.UserDetails {
 
     private final Users user;
-    private final UserDto userDto;
 
-    public UserDetails(Users user, UserDto userDto) {
+    public UserDetails(Users user) {
         this.user = user;
-        this.userDto = userDto;
     }
 
     @Override
@@ -36,7 +35,7 @@ public class UserDetails implements org.springframework.security.core.userdetail
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return user.getPrincipal();
     }
 
     @Override
@@ -46,7 +45,7 @@ public class UserDetails implements org.springframework.security.core.userdetail
 
     @Override
     public boolean isAccountNonLocked() {
-        return !user.isLocked();
+        return user.getLoginTryCount() > 3;
     }
 
     @Override
@@ -56,14 +55,7 @@ public class UserDetails implements org.springframework.security.core.userdetail
 
     @Override
     public boolean isEnabled() {
-        return !user.getState().equals(State.DELETED);
+        return !user.getStatus().equals(UserStatus.BLOCKED);
     }
 
-    public _User getUser() {
-        return user;
-    }
-
-    public UserDto getUserDto() {
-        return userDto;
-    }
 }

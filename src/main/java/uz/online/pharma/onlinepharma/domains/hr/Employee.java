@@ -1,7 +1,9 @@
 package uz.online.pharma.onlinepharma.domains.hr;
 
-import lombok.*;
-import org.hibernate.annotations.WhereJoinTable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 

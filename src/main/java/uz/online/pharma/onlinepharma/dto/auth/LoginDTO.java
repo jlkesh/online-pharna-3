@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginDto {
-    private String credential;
+public class LoginDTO {
+    private String principal;
     private String password;
 }

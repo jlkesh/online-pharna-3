@@ -37,6 +37,7 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
     };
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
+    private final CustomAuthenticationFilter customAuthenticationFilter;
     private final CustomAuthorizationFilter customAuthorizationFilter;
 
     @Override
@@ -67,7 +68,7 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .anyRequest().authenticated();
 
-        http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
+        http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(customAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
 
     }
